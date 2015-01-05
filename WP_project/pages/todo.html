@@ -1,0 +1,14 @@
+<form action="todo.php?save=1&eid=<?php echo $eventId ?>" method="post" style="margin-left:20px;margin-top:10px;vertical-align:top">
+	<label class="subText">Task Name:</label><input id="tname" name="tname" type="text" maxlength="20" required/><br><br>
+	<label class="subText" style="vertical-align:top">Task Description:</label><textarea id="tdesc" name="tdesc" type="text" width="30" height="50"  style="max-width:500px"></textarea><br><br>
+	<label class="subText">Task Due Date:</label><input id="tdue" name="tdue" type="date" width="30" /><br><br>
+	<label class="subText">Task Approx Price:</label><input id="tapprox" name="tapprox" type="number" width="30" min="0"  /><br><br>
+	<label class="subText">Would you like to assign helper for this task?</label>
+	<input class="subText" type="radio" name="helper" value="Y" onclick="showSection('helperinfo')">Yes<input class="subText" type="radio" value="N" name="helper" onclick="hideSection('helperinfo')" checked >No<br><br>
+	<section id="helperinfo" style="display:none">
+		<label class="subText">Helper Name:</label><input id="hname" name="hname" type="text" width="30" /><br><br>
+		<label class="subText">Helper Email:</label><input id="hemail" name="hemail" type="email" width="30" /><br><br>
+	</section>
+	<input type="submit" value="Save List" class="buttonCss"/>
+	<input type="submit" value="Clear" class="buttonCss"/>	
+</form>

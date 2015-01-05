@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+   <head>
+	<meta charset=�utf-8� />
+	<script type="text/javascript">
+           function validateForm()
+		    {
+			var x = document.login.emailTxt.value;
+			var y = document.login.passTxt.value;
+			//var email_regx =/^[0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,4}$/;
+			var email_regx =/^[0-9a-zA-Z]+[._]?[0-9a-zA-Z]+@[-0-9a-zA-Z._]+\.[a-zA-Z]{2,4}$/;
+			var pass_regx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}$/;
+			// at least one number, one lowercase and one uppercase letter
+			// at least six characters that are letters, numbers or the underscore
+	
+			if (x == null || x == "") 
+				{
+				alert("Please enter email address");
+				return false;
+				}
+			else if (!(x.match(email_regx)))
+				{
+				alert("Please enter Valid email address");
+				return false;
+				}
+			else if (y == null || y == "") 
+				{
+				alert("Please enter password");
+				return false;
+				}
+			else if (!(y.match(pass_regx)))
+				{
+				alert("Incorrect password \n Password should have: \n 1)At least one number, one lowercase and one uppercase letter \n 2)At least six characters that are letters, numbers or the underscore");
+				return false;
+				}
+			else
+				{
+				return true;
+				}
+			}
+    </script>
+   </head>
+   <body>
+		<form name="login" action="login_script_admin.php" onsubmit="return validateForm()" method="POST" style="width:100%;text-align:left;margin-left:0px;margin-top:0px" >
+			<label class="mainHeading">Sign In</label><hr>
+			<label class="subHeading" style="margin-left:10px">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="email" name="emailTxt" maxlength="100" size="26" placeholder="Enter Email" style="margin-top:15px" required/><br>
+			<label class="subHeading" style="margin-left:10px">Password:&nbsp;	</label>
+			<input type="password" name="passTxt" maxlength="100" size="26" placeholder="Enter password" required/><br><br>
+			<input type="submit" name="submitBtn" class="button" Value="Submit"/><br>
+			<input type="reset" name="reset" value="Cancel" class="button"/><br>
+			<a href="forgotpass.php" target="_top">Forgot Password? </a>
+		</form> 
+	</body>
+</html>

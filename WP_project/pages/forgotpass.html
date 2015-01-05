@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+   <head>
+	<meta charset=�utf-8� />
+	<script type="text/javascript">
+            function validateForm()
+		    {
+			var x = document.forgotpassword.emailTxt.value;
+			
+			var email_regx =/^[0-9a-zA-Z]+[._]?[0-9a-zA-Z]+@[-0-9a-zA-Z._]+\.[a-zA-Z]{2,4}$/;
+			
+			if (x == null || x == "") 
+			{
+			alert("Please enter email address");
+			return false;
+			}
+			else if (!(x.match(email_regx)))
+			{
+			alert("Please enter Valid email address");
+			return false;
+			}
+			else
+				{
+				return true;
+				}
+			}
+    </script>
+   </head>
+   <body>
+		<form name="forgotpassword" action="forgotpass2.php" onsubmit="return validateForm()" method="post" onsubmit="return fn1()">
+						<label class="mainHeading"> Password reset request </label><hr>
+						<label class="subHeading" style="margin-left:10px">Enter Email ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+						<input type="email" name="emailTxt" maxlength="100" size="26" placeholder="Enter Email" style="margin-top:15px" required/><br>
+						<input type="radio" name="usr" value="user" checked>User_SignIn<br>
+						<input type="radio" name="usr" value="sp">Service Provider_SignIn<br><br>
+						<input type="submit" name="submitBtn" class="button" Value="Submit"/><br>
+						<input type="reset" name="reset" value="Cancel" class="button"/><br>
+					</form>
+		</form> 
+	</body>
+</html>

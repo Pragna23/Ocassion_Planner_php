@@ -1,0 +1,35 @@
+<label><span class="mainHeading">Create Your Own</span></label><hr>
+<table align="center" width="600px" id="greetingid">
+<thead></thead>
+<tbody><br>
+	<tr>
+		<td style="width:170px;"valign="top"><label class="subHeading" style="margin-left:10px"> Event Name* </label></td>
+		<td valign="top"><input id="text1" onChange="ChangeLabel1(text1)"; type="text" name="eventTxt" maxlength="35" size="25" placeholder="Enter Name of Event"  required/></td>
+	</tr>	
+	<tr>	
+		<td style="width:170px;"valign="top"><label class="subHeading" style="margin-left:10px"> Host Name : </label></td>
+		<td valign="top"><input id="text2" onChange="ChangeLabel2(text2);" type="text" name="hostTxt" maxlength="100" size="25" placeholder="Enter Host Name"  required/></td>
+	</tr>	
+	<tr>	
+		<td style="width:170px;"valign="top"><label class="subHeading" style="margin-left:10px"> Contact Number: </label></td>
+		<td valign="top"><input id="text3" onChange="ChangeLabel3(text3);" type="text" name="contactTxt" maxlength="100" size="25" placeholder="Enter Contact Number"  required/></td>
+	</tr>	
+	<tr>	
+		<td style="width:170px;"valign="top"><label class="subHeading" style="margin-left:10px"> Venue: </label></td>
+		<td valign="top"><textarea id="text4" name="venueTxt" onChange="ChangeLabel4(text4);" rows="5" cols="27"></textarea> <br> <br> </td>
+	</tr>
+	<tr>	
+		<td style="width:170px;"valign="top"><label class="subHeading" style="margin-left:10px"> Start Time and Date : </label></td>
+		<td valign="top">
+			<input id="text6" onChange="ChangeLabel6(text6);" type="date" name="fnameTxt" required/>
+			<input id="text5" onChange="ChangeLabel5(text5);" type="time" name="fnameTxt"required/>
+		</td>
+	</tr>	
+	<tr>	
+		<td style="width:170px;"valign="top"><label class="subHeading" style="margin-left:10px"> Choose Color for Text </label></td>
+		<td valign="top"><input type="color" id="myColor" value="#ff0080"><button onclick="ChangeColor()">Change Color</button></td>
+	</tr>
+</tbody>
+</table>
+<input type="submit" value="Save" name="submitBtn" class="button" style="margin-left:255px;" onclick="showmsg()"/>
+<input type="reset" value="Reset" name="resetBtn" class="button" style="margin-left:25px;"/><br><br><br>

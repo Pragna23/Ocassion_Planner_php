@@ -1,0 +1,43 @@
+	 
+	<!-- Attached to customize_invite.php page -->
+
+	<label><span class="mainHeading">Create Your Own</span></label><hr>
+			<form action="customize_invite.php?iid=<?php echo $_REQUEST["iid"] ?>&eid=<?php echo $_REQUEST["eid"] ?>" id="greetingdiv" method="post">
+				<table align="center" width="600px" id="greetingid">
+					<thead></thead>
+					<tbody><br>
+						<tr>
+							<td style="width:170px;"valign="top"><label class="subHeading" style="margin-left:10px"> Event Name* : </label></td>
+							<td valign="top"><input id="text1" onChange="ChangeLabel1(text1);" type="text" name="eventTxt" maxlength="35" size="25" placeholder="Enter Name of Event" required/></td>
+						</tr>	
+						<tr>	
+							<td style="width:170px;"valign="top"><label class="subHeading" style="margin-left:10px"> Host Name* : </label></td>
+							<td valign="top"><input id="text2" onChange="ChangeLabel2(text2);" type="text" name="hostTxt" maxlength="30" size="25" placeholder="Enter Host Name" required/></td>
+						</tr>	
+						<tr>	
+							<td style="width:170px;"valign="top"><label class="subHeading" style="margin-left:10px"> Contact Number* : </label></td>
+							<td valign="top"><input id="text3" onChange="ChangeLabel3(text3);" type="tel" name="contactTxt" maxlength="10"  size="25" pattern="[0-9]{10}" placeholder="Enter Contact Number" required/></td>
+						</tr>	
+						<tr>	
+							<td style="width:170px;"valign="top"><label class="subHeading" style="margin-left:10px"> Venue: </label></td>
+							<td valign="top"><textarea id="text4" onChange="ChangeLabel4(text4);" rows="5" cols="27" required></textarea> <br> <br> </td>
+						</tr>
+						<tr>	
+							<td style="width:170px;"valign="top"><label class="subHeading" style="margin-left:10px"> Start Time and Date* : </label></td>
+							<td valign="top">
+								<input id="text6" onChange="ChangeLabel6(text6);" type="date" min="2014-12-17" name="dateTxt" />
+								<input id="text5" onChange="ChangeLabel5(text5);" type="time" name="timeTxt" required/>
+							</td>
+						</tr>	
+						<tr>	
+							<td style="width:170px;"valign="top"><label class="subHeading" style="margin-left:10px"> Choose Color for Text </label></td>
+							<td valign="top"><input type="color" id="myColor" value="#ff0080"><button onclick="ChangeColor()">Change Color</button></td>
+						</tr>
+						<tr>	
+							<td style="width:170px;"valign="top"><input type="text" id="evid" value="<?php echo $_REQUEST["eid"] ?>" style="display:none"></td>
+						</tr>
+					</tbody>
+					</table>
+					<input type="submit" id="savebtn" value="Save" name="submitBtn" class="buttonCSS"  style="margin-left:255px"/>
+					<input type="reset" value="Reset" name="resetBtn" class="buttonCSS" style="margin-left:25px;"/><br><br><br>
+			</form>
